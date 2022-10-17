@@ -1,0 +1,128 @@
+*{ 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.cab_nav{ 
+    
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    top: 0px;
+    background-color: rgba(2, 45, 78, 0.4);
+   
+    
+}
+.cab_nav ul li{ 
+    
+    list-style: none;
+    display: inline-block;
+    padding: 30px 50px;
+    color: rgb(255, 255, 255);
+    font-size: 21px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.cab_nav ul li a { 
+    text-decoration: none;
+
+    color: rgb(255, 255, 255);
+
+}
+.logo_img{ 
+    float: left;
+    width: 140px;
+} 
+
+.logo_img2{ 
+    float: right;
+    width: 110px;   
+} 
+.contenedor{ 
+    position: relative;
+    left: 50%;
+    top: 500px;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 100px 20px;
+    border: solid;
+    background-color: rgba(2, 45, 78, 0.4);
+}
+.titulo_cont{ 
+    font-size: 20px;
+    text-align:center;
+    padding: 20px 10px;
+}
+.parrafo_cont{ 
+    font-size: 20px;
+    text-align: justify;
+    color: #fff;
+}
+.productos_cont{
+    width: 20%;
+    height: 50%;
+    transform: translateX(200%) translateY(10%);
+    padding: 40px 10px;
+}
+
+.video{ 
+    position: fixed;
+    min-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform:  translateY(-50%) translateX(-50%);
+    z-index: -1;
+}
+
+.redes
+{
+        float: right;
+        width: 100px;
+        border: 3px solid #73AD21;
+        padding: 1px -1px;   
+        transform:  translateY(-50%) translateX(230%);
+    
+}
+.whatssap{
+    position: center;
+    width: 100px;
+    padding: 1px 2px;
+    cursor: pointer;
+    
+}
+.facebook{
+    position: center;
+    width: 100px;
+    padding: 1px 2px;
+    cursor: pointer;
+
+}
+.instagram{
+        position: center;
+        width: 100px;
+        padding: 1px 2px;
+        cursor: pointer;
+
+    }
+
+        .foot{
+            text-align: right;
+            width: 100%;
+            padding: 240px;
+            background-color: rgba(2, 45, 78, 0.4);
+        }
+        .foot ul li{ 
+
+            display: inline-block;
+            padding: 30px 80px;
+            font-size: 20px;
+            font-family: sans-serif;
+            cursor: pointer;
+            
+        }
+        .foot ul li a { 
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        
+        }
+
