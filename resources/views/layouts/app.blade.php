@@ -133,6 +133,22 @@
                             </div>
                         </li>
                     @endcan
+                    @can('configuracion')
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-wrench"></i>
+                                <span>Configuracion</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <h6 class="dropdown-header">Seguridad:</h6>
+                                @can('category.index')
+                                    <a class="dropdown-item" href="{{ route('category.index') }}">Categorias</a>
+                                @endcan
+                            </div>
+                        </li>
+                    @endcan
+
                 </ul>
                 <div id="content-wrapper">
                     @yield('content')

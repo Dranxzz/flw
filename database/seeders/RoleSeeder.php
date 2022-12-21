@@ -16,7 +16,7 @@ class RoleSeeder extends Seeder
     public function run()
     {
         $Admin= Role::create([
-            'name' => 'Admin', 
+            'name' => 'Admin',
         ]);
 
         $user = User::find(1);
@@ -35,12 +35,19 @@ class RoleSeeder extends Seeder
             'roles.getPaginate',
             'logs.index',
             'logs.getPaginate',
-            
+
             'users.index',
             'users.create',
             'users.delete',
             'users.updated',
-            'users.getPaginate'   
+            'users.getPaginate',
+
+            'configuracion',
+            'category.index',
+            'category.create',
+            'category.delete',
+            'category.updated',
+            'category.getPaginate'
         ]);
     }
 }
