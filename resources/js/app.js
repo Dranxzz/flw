@@ -27,6 +27,7 @@ Vue.component('logs', require('./Views/Logs/Logs').default);
 Vue.component('profile', require('./Views/Profile/Profile').default);
 Vue.component('password', require('./Views/Password/Password').default);
 Vue.component('category', require('./Views/Category/Category').default);
+Vue.component('subcategory', require('./Views/SubCategory/SubCategory').default);
 
 
 /**

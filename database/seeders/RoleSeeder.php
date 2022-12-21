@@ -43,11 +43,18 @@ class RoleSeeder extends Seeder
             'users.getPaginate',
 
             'configuracion',
+
             'category.index',
             'category.create',
             'category.delete',
             'category.updated',
-            'category.getPaginate'
+            'category.getPaginate',
+
+            'subcategory.index',
+            'subcategory.create',
+            'subcategory.delete',
+            'subcategory.updated',
+            'subcategory.getPaginate'
         ]);
     }
 }

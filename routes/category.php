@@ -40,3 +40,31 @@ Route::group(
             ->middleware('permission:category.getPaginate');
     }
 );
+
+Route::group(
+    [
+    'prefix'     => 'subcategory',
+    'middleware'  => 'auth'
+    ], function () {
+
+        Route::get('', [App\Http\Controllers\Config\SubCategory\IndexController::class, 'index'])
+            ->name('subcategory.index')
+            ->middleware('permission:subcategory.index');
+
+        Route::post('create', [App\Http\Controllers\Config\SubCategory\CreateController::class, 'create'])
+            ->name('subcategory.create')
+            ->middleware('permission:subcategory.create');
+
+        Route::delete('delete/{id}', [App\Http\Controllers\Config\SubCategory\DeleteController::class, 'destroy'])
+            ->name('subcategory.delete')
+            ->middleware('permission:subcategory.delete');
+
+        Route::put('{id}', [App\Http\Controllers\Config\SubCategory\UpdatedController::class, 'updated'])
+            ->name('subcategory.updated')
+            ->middleware('permission:subcategory.updated');
+
+        Route::get('get', [App\Http\Controllers\Config\SubCategory\IndexController::class, 'get'])
+            ->name('subcategory.getPaginate')
+            ->middleware('permission:subcategory.getPaginate');
+    }
+);
