@@ -54,7 +54,13 @@ class RoleSeeder extends Seeder
             'subcategory.create',
             'subcategory.delete',
             'subcategory.updated',
-            'subcategory.getPaginate'
+            'subcategory.getPaginate',
+
+            'coin.index',
+            'coin.create',
+            'coin.delete',
+            'coin.updated',
+            'coin.getPaginate'
         ]);
     }
 }

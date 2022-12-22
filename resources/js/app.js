@@ -28,6 +28,7 @@ Vue.component('profile', require('./Views/Profile/Profile').default);
 Vue.component('password', require('./Views/Password/Password').default);
 Vue.component('category', require('./Views/Category/Category').default);
 Vue.component('subcategory', require('./Views/SubCategory/SubCategory').default);
+Vue.component('coin', require('./Views/Coin/Coin').default);
 
 
 /**

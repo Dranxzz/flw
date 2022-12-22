@@ -148,6 +148,9 @@
                                 @can('subcategory.index')
                                     <a class="dropdown-item" href="{{ route('subcategory.index') }}">Sub-Categorias</a>
                                 @endcan
+                                @can('coin.index')
+                                <a class="dropdown-item" href="{{ route('coin.index') }}">Monedas</a>
+                            @endcan
                             </div>
                         </li>
                     @endcan
