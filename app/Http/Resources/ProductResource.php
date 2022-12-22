@@ -9,7 +9,7 @@ class ProductResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return array
      */
     public function toArray($request)
@@ -21,7 +21,13 @@ class ProductResource extends JsonResource
                 'description'     => $this->resource->description,
                 'deleted_at'     => $this->resource->deleted_at,
                 'minimum_amount'     => $this->resource->minimum_amount,
-
+            ],
+            'relationships' => [
+                'char' => $this->whenLoaded(
+                    'char', function () {
+                        return ProductCharResource::make($this->resource->char);
+                    }
+                ),
             ],
         ];
     }

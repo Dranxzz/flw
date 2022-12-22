@@ -20,7 +20,7 @@ class IndexController extends Controller
     public function get()
     {
         try {
-            $role = Product::withTrashed()->get();
+            $role = Product::with('char')->withTrashed()->get();
 
             return ProductResource::collection($role);
         } catch (ValidationException $ex) {
@@ -38,7 +38,7 @@ class IndexController extends Controller
                 'data' => [
                     'code'        => $ex->getCode(),
                     'title'       => __('errors.server.title'),
-                    'description' => __('errors.server.description'),
+                    'description' => $ex->getMessage(),
                 ]
                 ], Response::HTTP_INTERNAL_SERVER_ERROR
             );

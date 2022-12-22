@@ -69,6 +69,14 @@
                   ></i>
 
                   <i
+                    v-on:click.prevent="UpdatedOrCreateChar(keep)"
+                    v-if="updated"
+                    class="ico fas fa-piggy-bank fa-lg text-secondary"
+                    style="cursor: pointer"
+                    title="Usuario Recibe"
+                  ></i>
+
+                  <i
                     v-on:click.prevent="deletePermission(keep)"
                     v-if="deletet"
                     :class="
@@ -88,18 +96,21 @@
     </div>
     <create-rol @GetCreatedRol="GetCreatedRol" />
     <update-rol @GetCreatedRol="GetCreatedRol" ref="componente" />
+    <updated-create @GetCreatedRol="GetCreatedRol" ref="char" />
   </div>
 </template>
 <script>
 import axios from "axios";
 import CreateRol from "../Modals/CreateProduct.vue";
 import UpdateRol from "../Modals/UpdateProduct.vue";
+import UpdatedCreate from "../Modals/UpdatedOrCreateChar.vue";
 
 export default {
   name: "ProductosDataTable",
   components: {
     CreateRol,
     UpdateRol,
+    UpdatedCreate
   },
   props: {
     create: {
@@ -153,6 +164,11 @@ export default {
     UpdatedPermission(permission) {
       this.$refs.componente.UpdateGetRol(permission);
       $("#exampleModal2").modal("show");
+    },
+
+    UpdatedOrCreateChar(permission) {
+      this.$refs.char.UpdateRol(permission);
+      $("#exampleModal3").modal("show");
     },
 
     GetCreatedRol: function () {

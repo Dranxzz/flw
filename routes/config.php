@@ -122,5 +122,9 @@ Route::group(
         Route::get('get', [App\Http\Controllers\Config\Product\IndexController::class, 'get'])
             ->name('product.getPaginate')
             ->middleware('permission:product.getPaginate');
+
+        Route::post('create/char', [App\Http\Controllers\Config\Product\CreateCharController::class, 'create'])
+            ->name('product.create.char')
+            ->middleware('permission:product.create');
     }
 );

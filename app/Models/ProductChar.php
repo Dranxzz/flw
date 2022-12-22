@@ -8,25 +8,20 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use OwenIt\Auditing\Auditable as AuditableTrait;
 use OwenIt\Auditing\Contracts\Auditable;
 
-class Product extends Model implements Auditable
+
+class ProductChar extends Model implements Auditable
 {
-    use HasFactory,SoftDeletes,AuditableTrait;
+    use HasFactory,AuditableTrait;
 
     protected $auditInclude = [
         'name',
         'description',
-        'deleted_at',
-        'minimum_amount'
+        'product_id'
     ];
 
     protected $fillable = [
         'name',
         'description',
-        'minimum_amount'
+        'product_id'
     ];
-
-    public function char()
-    {
-        return $this->hasOne(ProductChar::class);
-    }
 }
