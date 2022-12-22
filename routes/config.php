@@ -96,3 +96,31 @@ Route::group(
             ->middleware('permission:coin.getPaginate');
     }
 );
+
+Route::group(
+    [
+    'prefix'     => 'product',
+    'middleware'  => 'auth'
+    ], function () {
+
+        Route::get('', [App\Http\Controllers\Config\Product\IndexController::class, 'index'])
+            ->name('product.index')
+            ->middleware('permission:product.index');
+
+        Route::post('create', [App\Http\Controllers\Config\Product\CreateController::class, 'create'])
+            ->name('product.create')
+            ->middleware('permission:product.create');
+
+        Route::delete('delete/{id}', [App\Http\Controllers\Config\Product\DeleteController::class, 'destroy'])
+            ->name('product.delete')
+            ->middleware('permission:product.delete');
+
+        Route::put('{id}', [App\Http\Controllers\Config\Product\UpdatedController::class, 'updated'])
+            ->name('product.updated')
+            ->middleware('permission:product.updated');
+
+        Route::get('get', [App\Http\Controllers\Config\Product\IndexController::class, 'get'])
+            ->name('product.getPaginate')
+            ->middleware('permission:product.getPaginate');
+    }
+);

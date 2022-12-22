@@ -60,7 +60,14 @@ class RoleSeeder extends Seeder
             'coin.create',
             'coin.delete',
             'coin.updated',
-            'coin.getPaginate'
+            'coin.getPaginate',
+
+            'product.index',
+            'product.create',
+            'product.delete',
+            'product.updated',
+            'product.getPaginate'
+
         ]);
     }
 }

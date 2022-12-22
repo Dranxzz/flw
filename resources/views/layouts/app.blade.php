@@ -89,7 +89,8 @@
                             <a class="dropdown-item" href="{{ route('profile.index') }}">Perfil</a>
                             <a class="dropdown-item" href="{{ route('password.index') }}">Contraseña</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+                            <a class="dropdown-item" href="#" data-toggle="modal"
+                                data-target="#logoutModal">Logout</a>
                         </div>
                     </li>
                 </ul>
@@ -149,8 +150,12 @@
                                     <a class="dropdown-item" href="{{ route('subcategory.index') }}">Sub-Categorias</a>
                                 @endcan
                                 @can('coin.index')
-                                <a class="dropdown-item" href="{{ route('coin.index') }}">Monedas</a>
-                            @endcan
+                                    <a class="dropdown-item" href="{{ route('coin.index') }}">Monedas</a>
+                                @endcan
+                                @can('product.index')
+                                    <a class="dropdown-item" href="{{ route('product.index') }}">Productos</a>
+                                @endcan
+
                             </div>
                         </li>
                     @endcan
@@ -188,7 +193,8 @@
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a class="btn btn-primary" href="{{ route('logout') }}"
+                        onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>

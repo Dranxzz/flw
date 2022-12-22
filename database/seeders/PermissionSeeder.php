@@ -61,6 +61,12 @@ class PermissionSeeder extends Seeder
         Permission::create(['name' => 'coin.updated']);
         Permission::create(['name' => 'coin.getPaginate']);
 
+        Permission::create(['name' => 'product.index']);
+        Permission::create(['name' => 'product.create']);
+        Permission::create(['name' => 'product.delete']);
+        Permission::create(['name' => 'product.updated']);
+        Permission::create(['name' => 'product.getPaginate']);
+
 
 
 
