@@ -77,6 +77,14 @@
                   ></i>
 
                   <i
+                    v-on:click.prevent="ExchangeCreate(keep)"
+                    v-if="updated"
+                    class="ico fas fa-sync fa-lg text-secondary"
+                    style="cursor: pointer"
+                    title="Monedas Intercambio"
+                  ></i>
+
+                  <i
                     v-on:click.prevent="deletePermission(keep)"
                     v-if="deletet"
                     :class="
@@ -97,6 +105,8 @@
     <create-rol @GetCreatedRol="GetCreatedRol" />
     <update-rol @GetCreatedRol="GetCreatedRol" ref="componente" />
     <updated-create @GetCreatedRol="GetCreatedRol" ref="char" />
+    <exchange-create @GetCreatedRol="GetCreatedRol" ref="exchange" />
+
   </div>
 </template>
 <script>
@@ -104,13 +114,15 @@ import axios from "axios";
 import CreateRol from "../Modals/CreateProduct.vue";
 import UpdateRol from "../Modals/UpdateProduct.vue";
 import UpdatedCreate from "../Modals/UpdatedOrCreateChar.vue";
+import ExchangeCreate from "../Modals/ExchangeCreate.vue";
 
 export default {
   name: "ProductosDataTable",
   components: {
     CreateRol,
     UpdateRol,
-    UpdatedCreate
+    UpdatedCreate,
+    ExchangeCreate
   },
   props: {
     create: {
@@ -169,6 +181,10 @@ export default {
     UpdatedOrCreateChar(permission) {
       this.$refs.char.UpdateRol(permission);
       $("#exampleModal3").modal("show");
+    },
+    ExchangeCreate(permission) {
+      this.$refs.exchange.UpdateRol(permission);
+      $("#exampleModal4").modal("show");
     },
 
     GetCreatedRol: function () {

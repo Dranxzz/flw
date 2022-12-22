@@ -29,4 +29,9 @@ class Product extends Model implements Auditable
     {
         return $this->hasOne(ProductChar::class);
     }
+
+    public function exchange()
+    {
+        return $this->hasMany(ProductExchange::class);
+    }
 }

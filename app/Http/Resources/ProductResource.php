@@ -28,6 +28,11 @@ class ProductResource extends JsonResource
                         return ProductCharResource::make($this->resource->char);
                     }
                 ),
+                'exchange' => $this->whenLoaded(
+                    'exchange', function () {
+                        return ProductExchangeResource::collection($this->resource->exchange);
+                    }
+                ),
             ],
         ];
     }

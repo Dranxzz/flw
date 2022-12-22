@@ -126,5 +126,9 @@ Route::group(
         Route::post('create/char', [App\Http\Controllers\Config\Product\CreateCharController::class, 'create'])
             ->name('product.create.char')
             ->middleware('permission:product.create');
+
+        Route::post('create/exchange', [App\Http\Controllers\Config\Product\CreateExchangeController::class, 'create'])
+            ->name('product.create.char')
+            ->middleware('permission:product.create');
     }
 );

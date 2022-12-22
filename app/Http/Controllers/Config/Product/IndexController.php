@@ -20,7 +20,7 @@ class IndexController extends Controller
     public function get()
     {
         try {
-            $role = Product::with('char')->withTrashed()->get();
+            $role = Product::with(['char','exchange.coin','exchange.product'])->withTrashed()->get();
 
             return ProductResource::collection($role);
         } catch (ValidationException $ex) {
