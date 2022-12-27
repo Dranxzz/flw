@@ -50,7 +50,7 @@
 
                                 </ul>
                             </blockquote>
-
+                            <button type="submit" class="button button-a button-big button-rouded">Vender</button>
                         </div>
                     </div>
 
