@@ -22,6 +22,11 @@ class OrderDetail extends Model implements Auditable
         'order_id',
         'email',
     ];
+
+    public function coin()
+    {
+        return $this->belongsTo(Coin::class);
+    }
 }
 
 

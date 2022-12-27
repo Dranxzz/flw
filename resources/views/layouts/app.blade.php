@@ -134,6 +134,23 @@
                             </div>
                         </li>
                     @endcan
+
+                    @can('order')
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-store"></i>
+                                <span>Ventas</span>
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                                <h6 class="dropdown-header">Ventas:</h6>
+                                @can('order.index')
+                                    <a class="dropdown-item" href="{{ route('order.index') }}">Ordenes venta</a>
+                                @endcan
+                            </div>
+                        </li>
+                    @endcan
+
                     @can('configuracion')
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button"

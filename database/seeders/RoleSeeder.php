@@ -66,7 +66,14 @@ class RoleSeeder extends Seeder
             'product.create',
             'product.delete',
             'product.updated',
-            'product.getPaginate'
+            'product.getPaginate',
+
+            'order',
+            'order.index',
+            'order.create',
+            'order.delete',
+            'order.updated',
+            'order.getPaginate'
 
         ]);
     }

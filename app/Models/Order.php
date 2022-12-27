@@ -24,4 +24,14 @@ class Order extends Model implements Auditable
         'product_id',
         'status',
     ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+
+    public function detail()
+    {
+        return $this->hasOne(OrderDetail::class);
+    }
 }
