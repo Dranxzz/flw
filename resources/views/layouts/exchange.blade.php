@@ -8,6 +8,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Favicons -->
     <link href="{{ asset('venta/img/favicon.png')}}" rel="icon">
     <link href="{{ asset('venta/img/apple-touch-icon.png')}}" rel="apple-touch-icon">

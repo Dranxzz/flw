@@ -36,7 +36,7 @@
                             <h1 class="article-title">{{ $product->name }}</h1>
 
                         </div>
-                        <div class="article-content">
+                        <div class="article-content" id="app">
                             <p>{{ $product->description }}</p>
 
                             <blockquote class="blockquote">
@@ -45,12 +45,13 @@
                                 <p class="mb-0">{{ $product->char->description }}</p>
                                 <ul>
                                     @foreach ($product->exchange as $item)
-                                        <li>{{$product->name}} a {{$item->coin->name}} = {{$item->amount}}</li>
+                                        <li>{{ $product->name }} a {{ $item->coin->name }} = {{ $item->amount }}</li>
                                     @endforeach
 
                                 </ul>
                             </blockquote>
-                            <button type="submit" class="button button-a button-big button-rouded">Vender</button>
+                            <saleproduct product="{{ $product->id }}" />
+
                         </div>
                     </div>
 

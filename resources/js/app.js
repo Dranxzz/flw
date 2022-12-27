@@ -30,6 +30,7 @@ Vue.component('category', require('./Views/Category/Category').default);
 Vue.component('subcategory', require('./Views/SubCategory/SubCategory').default);
 Vue.component('coin', require('./Views/Coin/Coin').default);
 Vue.component('product', require('./Views/Product/Product').default);
+Vue.component('saleproduct', require('./Views/SaleProduct/SaleProduct').default);
 
 
 /**
