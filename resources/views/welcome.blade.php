@@ -35,7 +35,7 @@
                 @foreach ($products as $item)
                     <div class="col-md-4">
                         <div class="service-box">
-                            <a href="{{ route('detail') }}">
+                            <a href="{{ route('detail',$item->id) }}">
                                 <div class="service-ico">
                                     <span class="ico-circle"><i class="ion-monitor"></i></span>
                                 </div>

@@ -38,7 +38,8 @@ class HomeController extends Controller
 
     public function detail()
     {
-        return view('detail');
+        $product = Product::where('id', 1)->first();
+        return view('detail', ['product' => $product]);
     }
 
 

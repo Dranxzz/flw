@@ -9,21 +9,21 @@
     <meta content="" name="description">
 
     <!-- Favicons -->
-    <link href="venta/venta/img/favicon.png" rel="icon">
-    <link href="venta/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="{{ asset('venta/img/favicon.png')}}" rel="icon">
+    <link href="{{ asset('venta/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Bootstrap CSS File -->
-    <link href="venta/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('venta/lib/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
-    <link href="venta/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="venta/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="venta/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="venta/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="venta/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="{{ asset('venta/lib/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('venta/lib/animate/animate.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('venta/lib/ionicons/css/ionicons.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('venta/lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{ asset('venta/lib/lightbox/css/lightbox.min.css')}}" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
-    <link href="venta/css/style.css" rel="stylesheet">
+    <link href="{{ asset('venta/css/style.css')}}" rel="stylesheet">
 
     <!-- =======================================================
     Theme Name: DevFolio
@@ -97,21 +97,21 @@
     <div id="preloader"></div>
 
     <!-- JavaScript Libraries -->
-    <script src="venta/lib/jquery/jquery.min.js"></script>
-    <script src="venta/lib/jquery/jquery-migrate.min.js"></script>
-    <script src="venta/lib/popper/popper.min.js"></script>
-    <script src="venta/lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="venta/lib/easing/easing.min.js"></script>
-    <script src="venta/lib/counterup/jquery.waypoints.min.js"></script>
-    <script src="venta/lib/counterup/jquery.counterup.js"></script>
-    <script src="venta/lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="venta/lib/lightbox/js/lightbox.min.js"></script>
-    <script src="venta/lib/typed/typed.min.js"></script>
+    <script src="{{ asset('venta/lib/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/jquery/jquery-migrate.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/popper/popper.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/easing/easing.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/counterup/jquery.waypoints.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/counterup/jquery.counterup.js') }}"></script>
+    <script src="{{ asset('venta/lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/lightbox/js/lightbox.min.js') }}"></script>
+    <script src="{{ asset('venta/lib/typed/typed.min.js') }}"></script>
     <!-- Contact Form JavaScript File -->
-    <script src="venta/contactform/contactform.js"></script>
+    <script src="{{ asset('venta/contactform/contactform.js') }}"></script>
 
     <!-- Template Main Javascript File -->
-    <script src="venta/js/main.js"></script>
+    <script src="{{ asset('venta/js/main.js') }}"></script>
 
 </body>
 
