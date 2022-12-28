@@ -93,14 +93,11 @@
 </template>
 <script>
 import axios from "axios";
-import CreateRol from "../Modals/CreateCategory.vue";
-import UpdateRol from "../Modals/UpdateCategory.vue";
 
 export default {
   name: "OrdernesVentasDataTable",
   components: {
-    CreateRol,
-    UpdateRol,
+
   },
   props: {
     create: {
