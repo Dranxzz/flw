@@ -7,7 +7,7 @@
     </IfModule>
 
 
- 
+
     RewriteEngine On
 
 
@@ -44,7 +44,7 @@
 
     RewriteCond %{REQUEST_URI} !^/public/
 
-    RewriteRule ^(css|js|img|fonts|vendor|qrcodes|assets|images|media|plugins|storage|event|argon)/(.*)$ public/$1/$2 [L,NC]
+    RewriteRule ^(venta|css|js|img|fonts|vendor|qrcodes|assets|images|media|plugins|storage|event|argon)/(.*)$ public/$1/$2 [L,NC]
 
 </IfModule>
 
