@@ -33,7 +33,7 @@ class HomeController extends Controller
     {
         $products = Product::all();
 
-        return view('welcome', ['products' => $products]);
+        return view('auth.login', ['products' => $products]);
     }
 
     public function home()
