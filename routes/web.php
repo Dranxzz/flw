@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/detail/{id}', [App\Http\Controllers\HomeController::class, 'detail'])->name('detail');
 Route::post('/order/save', [App\Http\Controllers\HomeController::class, 'orderSave']);
 
